@@ -1,0 +1,39 @@
+<html>
+  <body>
+    <div style="margin: auto; justify-content: center">
+      <div style="flex-direction: column; display: inline">
+        <p style="font-size: 50px">
+          joy: &#128513; sadness: &#128546; anger: &#128545; fear: &#128552;
+          surprise: &#128561; love: &#128536;
+        </p>
+      </div>
+      <form action="{{url_for('text')}}" method="post">
+        <p style="font-size: 50px">Enter Your Feeling:</p>
+        <p style="font-size: 50px; border-width: 2px">
+          <input
+            style="height: 50px; font-size: 30px"
+            type="text"
+            name="nm"
+            value="{{ request.form['nm'] }}"
+          />
+        </p>
+        <p style="font-size: 50px">
+          <input style="font-size: 50px" type="submit" value="Submit" />
+        </p>
+      </form>
+      {% if result=='joy' %}
+      <p style="font-size: 50px">Your mood: &#128513;</p>
+      {% endif %} {% if result=='sadness' %}
+      <p style="font-size: 50px">Your mood: &#128546;</p>
+      {% endif %} {% if result=='anger' %}
+      <p style="font-size: 50px">Your mood: &#128545;</p>
+      {% endif %} {% if result=='fear' %}
+      <p style="font-size: 50px">Your mood: &#128552;</p>
+      {% endif %} {% if result=='surprise' %}
+      <p style="font-size: 50px">Your mood: &#128561;</p>
+      {% endif %} {% if result=='love' %}
+      <p style="font-size: 50px">Your mood: &#128536;</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
