@@ -1,5 +1,5 @@
 Please follow the steps below to run scripts:
-1. pip3 install -r requirements
+1. pip3 install -r requirements.txt
 2. python3 bert_with_stopword_lemmatizer.py
 Make sure the file Bert_with_stopword_lemmatizer.h5 is saved.
 3a. python3 other_models.py
